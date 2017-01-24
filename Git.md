@@ -3,10 +3,10 @@
 ## Misc useful commands
 
 ### pwd
-  + will tell you which directory (folder) you are currently in
+  - will tell you which directory (folder) you are currently in
 
 ### cd ..
-  + will move you up one step within the directory
+  will move you up one step within the directory
 
 ### cd <folder-name>
   + will move you to the folder <folder-name> - _as long as <folder-name> is located within the directory you are currently in_
