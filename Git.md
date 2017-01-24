@@ -16,7 +16,7 @@
 
 ### git status
   + ...
-  + _it is useful to use this command before committing_ and _pushing files to the repo, to ensure that you are adding and removing the correct files_
+  + _it is useful to use this command before & after committing_ and _pushing files to the repo, to ensure that you are adding and removing the correct files_
 
 ## Adding to GitHub
 
