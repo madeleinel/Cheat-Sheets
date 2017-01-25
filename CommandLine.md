@@ -1,4 +1,4 @@
-# Git Cheat Sheet
+# Command Line Cheat Sheet
 
 ## Misc useful commands
 
@@ -12,7 +12,18 @@
   + will move you to the folder [folder-name] - _as long as [folder-name] is located within the directory you are currently in_
 
 ### ls
-  + will list everything within the current folder
+  + will list all visible files and folders within the current directory
+
+### ls -a
+  + will list everything - including hidden files - within the current directory
+
+### touch [file-name]
+  + will create a file named [file-name] within the current directory
+
+<!-- ### echo  -->
+
+### atom [file-name]
+  + will open the file [file-name] in Atom
 
 ### git status
   + ...
@@ -32,3 +43,8 @@
 
 ### git push
   + pushes the committed items to GitHub
+
+## Other commands
+
+#### python --version
+  + will return which version of Python is currently installed
