@@ -34,10 +34,10 @@
 ### git add --all .
   + will add all changes within the current directory to the commit [pile]; including added, renamed and removed files
 
-### git add .
+#### git add .
   + will add everything within the current directory to the commit [pile]
 
-### git rm <file-name>
+#### git rm <file-name>
   + will add instructions to the commit [pile] to remove [file-name] from the repo
 
 ### git commit -m "[message]"
