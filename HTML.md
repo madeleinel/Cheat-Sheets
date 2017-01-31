@@ -3,7 +3,7 @@
 ## Links
 
 ### Linking text
-<a href="https://url.com">Description of link</a>
+/<a href="https://url.com"/>Description of link/</a/>
 
 ### Linking an image
 <a href="https://url.com">
