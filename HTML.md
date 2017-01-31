@@ -73,32 +73,32 @@ Creates an bullet point list
 ## Tables
 
 ### Table tags
-_Table set-up_
+_Table set-up_  
 Table tag:
 ```
 <table>Table</table>
 ```
 
-Table head tag:
+Table head tag:  
 Contains heading information (the row/column headers) about the table.
 ```
 <thead>Table Head</thead>
 ```
 
-Table body tag:
+Table body tag:  
 Contains the tabular data (the table cells) of the table.
 ```
 <tbody>Table Body</tbody>
 ```
 
-_Table content_
-Table row tag:
+_Table content_  
+Table row tag:  
 Each tag contains one row of the table.
 ```
 <tr>Table Row</tr>
 ```
 
-Table data (column) tag:
+Table data (column) tag:  
 Each tag contains one column within the current row.
 ```
 <td>Table Data</td>
@@ -111,7 +111,7 @@ Table header tag:
 
 ### Creating tables
 
-_Table rows_
+_Table rows_  
 To create a table with three rows:
 ```
 <table>
@@ -121,9 +121,9 @@ To create a table with three rows:
 </table>
 ```
 
-_Table columns_
-To set table columns; tell each row how many Table Data cells (ie how many columns) to have.
-
+_Table columns_  
+To set table columns; tell each row how many Table Data cells (ie how many columns) to have.  
+  
 To create a table with two rows and two columns:
 ```
 <table>
@@ -138,7 +138,7 @@ To create a table with two rows and two columns:
 </table>
 ```
 
-_Table headers_
+_Table headers_  
 To create a table with three rows, two columns and two column headers:
 ```
 <table>
@@ -166,7 +166,7 @@ To create a table with three rows, two columns and two column headers:
 </table>
 ```
 
-_Table title_
+_Table title_  
 To create a table with two rows, three columns, three column headers and a title spanning all three columns:
 ```
 <table>
@@ -197,13 +197,13 @@ To create a table with two rows, three columns, three column headers and a title
 ```
 
 ### Table styling
-Colspan attribute:
+Colspan attribute:  
 By default, each table cell takes up one column. Use the colspan attribute to define how many columns a cell should take up.
 ```
 <th colspan="4">This cell will take up four columns</th>
 ```
 
-Borders:
+Borders:  
 To set a 1px border around the entire table and each cell, set a border within the table tag:
 ```
 <table border="1px">
@@ -211,7 +211,7 @@ To set a 1px border around the entire table and each cell, set a border within t
 </table>
 ```
 
-Styling attributes:
+Styling attributes:  
 Same as with non-table tags, table tags can be styled in HTML using style attributes.
 To create a table with two rows and two columns, blue text on the first row and green text on the second row:
 ```
@@ -245,7 +245,7 @@ To create a table with two rows and two columns, and a border between each cell 
 Allows for styling of the content through the html file
 
 ### Style attribute
-This tag can be used for paragraphs, headings, links and tables (and likely more)
+This tag can be used for paragraphs, headings, links and tables (and likely more)  
 
 To set the font size of a paragraph:
 ```
