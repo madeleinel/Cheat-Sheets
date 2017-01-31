@@ -73,7 +73,7 @@ Creates an bullet point list
 ## Tables
 
 ### Table tags
-**Table set-up**
+_Table set-up_
 Table tag:
 ```
 <table>Table</table>
@@ -91,7 +91,7 @@ Contains the tabular data (the table cells) of the table.
 <tbody>Table Body</tbody>
 ```
 
-**Table content**
+_Table content_
 Table row tag:
 Each tag contains one row of the table.
 ```
@@ -111,7 +111,7 @@ Table header tag:
 
 ### Creating tables
 
-**Table rows**
+_Table rows_
 To create a table with three rows:
 ```
 <table>
@@ -121,7 +121,7 @@ To create a table with three rows:
 </table>
 ```
 
-**Table columns**
+_Table columns_
 To set table columns; tell each row how many Table Data cells (ie how many columns) to have.
 
 To create a table with two rows and two columns:
@@ -138,7 +138,7 @@ To create a table with two rows and two columns:
 </table>
 ```
 
-**Table headers**
+_Table headers_
 To create a table with three rows, two columns and two column headers:
 ```
 <table>
@@ -166,7 +166,7 @@ To create a table with three rows, two columns and two column headers:
 </table>
 ```
 
-**Table title**
+_Table title_
 To create a table with two rows, three columns, three column headers and a title spanning all three columns:
 ```
 <table>
