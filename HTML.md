@@ -39,7 +39,7 @@ Creates a numbered list
 ```
 
 ### Unordered lists
-Creates an bullet point list
+Creates a bullet point list
 
 ```
 <ul>
@@ -74,7 +74,8 @@ Creates an bullet point list
 
 ### Table tags
 _Table set-up_  
-Table tag:
+
+  Table tag:
 ```
 <table>Table</table>
 ```
@@ -92,7 +93,8 @@ Contains the tabular data (the table cells) of the table.
 ```
 
 _Table content_  
-Table row tag:  
+
+  Table row tag:  
 Each tag contains one row of the table.
 ```
 <tr>Table Row</tr>
@@ -112,7 +114,8 @@ Table header tag:
 ### Creating tables
 
 _Table rows_  
-To create a table with three rows:
+
+  To create a table with three rows:
 ```
 <table>
   <tr>Row 1</tr>
@@ -122,8 +125,9 @@ To create a table with three rows:
 ```
 
 _Table columns_  
-To set table columns; tell each row how many Table Data cells (ie how many columns) to have.  
-  
+
+  To set table columns; tell each row how many Table Data cells (ie how many columns) to have.  
+
 To create a table with two rows and two columns:
 ```
 <table>
@@ -139,7 +143,8 @@ To create a table with two rows and two columns:
 ```
 
 _Table headers_  
-To create a table with three rows, two columns and two column headers:
+
+  To create a table with three rows, two columns and two column headers:
 ```
 <table>
   <thead>
@@ -167,7 +172,8 @@ To create a table with three rows, two columns and two column headers:
 ```
 
 _Table title_  
-To create a table with two rows, three columns, three column headers and a title spanning all three columns:
+
+  To create a table with two rows, three columns, three column headers and a title spanning all three columns:
 ```
 <table>
   <thead>
