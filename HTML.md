@@ -9,7 +9,7 @@ Allows you to divide the page into containers that can be styled individually.
 <div id="idName">Text</div>
 ```
 
-#### Span's
+### Span's
 Allows you to control the styling of smaller parts of the page, eg individual words of pieces of text.  
 Eg, wrapping the first word of each paragraph in span tags allows you to style those words separately from the rest of the paragraph.
 ```
