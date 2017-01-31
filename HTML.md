@@ -72,37 +72,83 @@ Creates an bullet point list
 
 ## Tables
 
+Table tag:
+```
+<table>Table</table>
+```
+
+Table row tag:
+```
+<tr>Table Row</tr>
+```
+
+Table Data (column) tag:
+```
+<td>Table Data</td>
+```
+
+To create a table with three rows:
+<table>Table 1
+  <tr>Row 1
+  </tr>
+  <tr>Row 2</tr>
+  <tr>Row 3</tr>
+</table>
+```
+<table>Table 1
+  <tr>Row 1</tr>
+  <tr>Row 2</tr>
+  <tr>Row 3</tr>
+</table>
+```
+
+To set table columns; tell each row how many Table Data cells (ie how many columns) to have:
+```
+<table>Table 1
+  <tr>Row 1
+    <td>Table Data 1</td>
+    <td>Table Data 2</td>
+  </tr>
+  <tr>Row 2
+    <td>Table Data 1</td>
+    <td>Table Data 2</td>
+  </tr>
+</table>
+```
 ###
 
 ## Inline CSS
 Allows for styling of the content through the html file
 
 ### Style attribute
-
-This tag can be used for paragraphs, headings, and links (and likely more)
+This tag can be used for paragraphs, headings, links and tables (and likely more)
 
 To set the font size of a paragraph:
+<p style="font-size: 20px">Text</p>
 ```
 <p style="font-size: 20px">Text</p>
 ```
 
 To set the font colour of a heading:
+<h1 style="color: black">Text</h1>
 ```
 <h1 style="color: black">Text</h1>
 ```
 
-To set the font type, background colour and text alignment of a heading:
+To set the font type, background colour, border thickness and text alignment of a heading:
+<h2 style="font-family: Arial; background-color: blue; border: 1px; text-align: center">Text</h2>
 ```
-<h2 style="font-family: Arial; background-color: blue; text-align: center">Text</h2>
+<h2 style="font-family: Arial; background-color: blue; border: 1px; text-align: center">Text</h2>
 ```
 ### Styling tags
-
 To bold the text:
+<strong>Text</strong>
 ```
 <strong>Text</strong>
 ```
 
 To italicize the text:
+<em>Text</em>
 ```
 <em>Text</em>
 ```
