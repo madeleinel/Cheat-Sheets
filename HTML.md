@@ -1,5 +1,21 @@
 # HTML Cheat Sheet
 
+## Basic components
+
+### Div's
+Allows you to divide the page into containers that can be styled individually.
+```
+<div class="className">Text</div>
+<div id="idName">Text</div>
+```
+
+#### Span's
+Allows you to control the styling of smaller parts of the page, eg individual words of pieces of text.  
+Eg, wrapping the first word of each paragraph in span tags allows you to style those words separately from the rest of the paragraph.
+```
+<p>Here is a sentence with <span>text</span></p>
+```
+
 ## Links
 
 ### Linking text
@@ -11,6 +27,13 @@
 ```
 <a href="https://url.com">
   <img src="https://url.com">
+</a>
+```
+
+### Linking a div
+```
+<a href="https://url.com">
+  <div class="divName"></div>
 </a>
 ```
 
@@ -248,7 +271,8 @@ To create a table with two rows and two columns, and a border between each cell 
 ```
 
 ## Inline CSS
-Allows for styling of the content through the html file
+Allows for styling of the content through the html file.  
+_However >> prefer to do all styling within the CSS file, for clarity and ease of use_
 
 ### Style attribute
 This tag can be used for paragraphs, headings, links and tables (and likely more)  
