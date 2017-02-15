@@ -11,10 +11,21 @@ Allows you to divide the page into containers that can be styled individually.
 
 ### Span's
 Allows you to control the styling of smaller parts of the page, eg individual words of pieces of text.  
+They're inline, ie don't add line breaks or spaces around the content within the span (as eg div's do).  
 Eg, wrapping the first word of each paragraph in span tags allows you to style those words separately from the rest of the paragraph.
 ```
 <p>Here is a sentence with <span>text</span></p>
 ```
+
+### Headers
+Specifies the 'level' of the heading.  
+Will also tell search engines what the most important content of the site is (so important for eg SEO)
+```
+<h1> to <h6>
+```
+
+### Paragraphs
+etc etc...
 
 ## Links
 
@@ -41,12 +52,12 @@ Eg, wrapping the first word of each paragraph in span tags allows you to style t
 
 ### Linking to an online image
 ```
-<img src="https://url.com">   [<..."url" />]?
+<img src="https://url.com" alt="imageDescription">   [<..."url" />]?
 ```
 
 ### Linking to a local image
 ```
-<img src="">
+<img src="" alt="imageDescription">
 ```
 
 ## Lists
@@ -300,4 +311,9 @@ To bold the text:
 To italicize the text:
 ```
 <em>Text</em>
+```
+
+To strikethrough the text:
+```
+<del>Text</del>
 ```
