@@ -1,3 +1,5 @@
+// -------- from JS30 Array Cardio I -------- //
+
 // // arrow functions           // //
 // // the base constants        // //
 // // .filter                   // // ...all of these functions will automatically loop through all objects within the array

@@ -162,6 +162,20 @@ If you give an element relative positioning and tell it to have a margin-top of 
 #### fixed:
 This anchors an element to the browser window—you can think of it as gluing the element to the screen. If you scroll up and down, the fixed element stays put even as other elements scroll past.
 
+#### Combining positions
+The following will place the child at the bottom of the container & make it stick to the container size:
+```
+container {
+  position: relative;
+}
+
+child {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+}
+```
+
 ### Float
 
 When mixing large floating elements with non-floating ones elements can end up on top of each other.  
@@ -176,18 +190,145 @@ to display list vertically (as default)
 
 ## to make content responsive for different sized screens:
 
+### Preferred element stylings
+
+#### For background images:
+```
+background-image: ...;
+background-size: cover;
+// NOT: //
+background-size: 100%;
+// NOT: //
+height: 200px;
+width: 200px;
+```
+Setting the background size to 'cover' will ensure the image covers the entire element even when the element becomes smaller than the original image; it ensures that is scales well even on smaller screens.  
+Comparatively, '100%' (or assigning a specific height and width to the image) makes it scale poorly on smaller screens.  
+Eg: if the image is 200*600px, and the screen is less than 600px wide, 'background-size: 100%' will make the image height less than 200px. Using 'background-size: cover' won't change the image size, only the 'real estate' it occupies on-screen.
+
+#### Using one-column set-up
+Keeping all content within one column makes the site more mobile-friendly, as it can display as one column on smaller screens as well.  
+If using a multicolumn layout, you will need to change the layout (eg moving the columns into rows) in order to optimise it for smaller screens.
+
+#### Setting max-widths
+````
+max-width: 600px;
+````
+Most smartphones and tablets have a max-width of 700px (when horizontally oriented); so if the body's max-width is set to 600px, it will display well on those screens as well.  
+NOTE: Will still need to set up special stylesheets for vertically-oriented screens.
+
+### Media queries
+Media queries enable us to change the layout of the page when the screen is of a certain size. They can help us optimize the whitespace / negative space and font sizes on narrow screens.  
+Simply put, you can nest an alternative stylesheet within the media query; so, this stylesheet will overwrite / overrule stylings of the same elements outside the media query.  
+NOTE: Media queries should be included at the end of the stylesheet, to ensure that it won't be overridden by commands outside of the media query && to ensure that the browser still has a styling for the element, in case it can't parse the new command (as eg for the gradients) >> as browsers read the sheets from top to bottom.
+NOTE: At smaller sizes, more whitespace (eg between headers) increases the readability.
+
+#### Features to target in media queries
+These elements and stylings are useful to target through media queries:
+* headers
+  * font size, padding, margin and line-height
+    * ('line-height' >> useful eg if the header wraps, then can specify the space between the lines)
+* images
+  * margin
+* multi-column layout
+  * switch from column to row layout
+
+#### Example
+The following media query is set to activate when the devices has a max width of 500px (ie, the screen is smaller than that):
+```
+@media (max-width: 500px) {
+  body {
+    background: cadetblue;
+  }
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+      font-size: 20px;
+      margin: 20px 0 30px 0;
+    }
+  div .article {
+    margin: 20px 12px 0 12px;
+  }
+}
+```
+
+### Misc
+
 to center div
 >> margin: 0 auto; // margin: auto; >> sets left/right margins to 'auto', making both of these margins stretch to the edge of the page >> centers the div
 >> Setting a div's margin to auto tells the document to automatically put equal left and right margins on our element, centering it on the page.
 
 set div 'max-width' rather than 'width'
 
-@media (max-width: 500px) {
-  body {
-    font-size: 12px;
-  }
-}
->> set media query to activate when the devices has a max width of 500px (ie, the screen is smaller than that)
+## Text-align vs Float
+
+### Text-align
+Text-align can only align blocks - eg headers, paragraph, list and div tags - but not inline elements - eg span, links, images and form field tags.
+
+### Float
+Float can align inline elements, and make text flow around an image within the same p tag.
+
+## Colours
+
+### Gradients
+
+#### Radial gradients
+The gradient radiates outwards, from a central point.
+
+#### Linear gradients
+The gradient goes in one, linear direction.
+
+#### Gradients using rgba
+The following will create a linear gradient which starts at the bottom of the element; it will start as black with 100% opacity (bottom), and transfer to white with 40% opacity (top).
+```
+background: linear-gradient(bottom, rgba(0,0,0,1), rgba(255,255,255,0.4));
+```
+
+#### Enabling gradients
+Most browsers require vendor prefixes to make the gradients appear on-screen.  
+
+For:
+Safari, Chrome and Opera
+```
+background: -webkit-linear-gradient(...);
+```
+Firefox
+```
+background: -moz-linear-gradient(...);
+```
+IE  
+Not currently supported (?); so set regular background colour as a back-up. NOTE that this should be included above the gradients background styles.  
+```
+background: rgb(0,0,0);
+```
+"Future proofing" (not using any vendor prefixes)
+```
+background: linear-gradient(...);
+```
+
+  So it should look like this:
+```
+background: rgb(0,0,0);
+background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+```
+
+## Spaces
+
+### Padding
+
+### Margin
+Automatically / Universally, each div is given a top margin of 40px, and top & bottom margins of 0.
+
+## Vendor prefixes
+Required for new features, such as gradients, transitions, flexbox, etc., to ensure that they can display within each/all browsers.
+
+
+
 
 
 
