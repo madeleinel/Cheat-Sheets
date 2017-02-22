@@ -71,8 +71,15 @@
 
 ### git branch
   + will list all the branches in the repo && indicate which is the current one
-<!-- ### git log
-  + will display the repo log within the terminal -->
+
+### git push origin [branch-name]
+  + will push the new branch to the github
+  + 'git push' alone will not make the new branch (& its material) appear on github
+    + NOTE: After doing this & having completed the merge onto the 'master' branch, should switch back to the 'master' branch on the computer and use 'git pull', to ensure that the 'master' branch is up to date locally
+
+  <!-- ### git log
+    + will display the repo log within the terminal
+    + exit using command 'q' -->
 
 ## Other commands
 
