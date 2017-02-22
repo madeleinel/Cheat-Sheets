@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <script src="http://dash.ga.co/assets/jquery.js"></script>
+  <style>
+  .menuItem {
+    height: 200px;
+    background-size: cover;
+    position: relative;
+    background-image: url("http://dash.ga.co/assets/firstcourse.jpg");
+  }
+
+  p {
+    color: rgba(255,255,255,1);
+    background: rgb(0,0,0);
+    text-align: justify;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    height: 30px;
+  }
+  small {
+    opacity: 0;
+  }
+  </style>
+  </head>
+
+  <body>
+    <div class="menuItem">
+      <p>Spaghetti Carbonara <span class="price">£14</span><br />
+      <small>Spaghetti-shaped spaghetti with a meat-based carbonara sauce.</small></p>
+    </div>
+
+    <script>
+      $('div').on('click', function() {
+        $(this).toggleClass('show-description');
+      });
+    </script>
+  </body>
+</html>
