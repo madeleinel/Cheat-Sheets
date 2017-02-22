@@ -2,6 +2,10 @@
 
 ## Misc useful commands
 
+### [tab]
+  + [command] [tab] / [command] [character] [tab]
+  + will present the different options available for the current command; [tab] to move between the options; [enter] to choose the highlighted option
+
 ### pwd
   + will tell you which directory (folder) you are currently in
 
@@ -10,6 +14,9 @@
 
 ### cd [folder-name]
   + will move you to the folder [folder-name] - _as long as [folder-name] is located within the directory you are currently in_
+
+### cd [tab] / cd [character] [tab]
+  + will present the different navigation options; use [tab] to move between the options && [enter] to choose the highlighted option.
 
 ### ls
   + will list all visible files and folders within the current directory
@@ -25,6 +32,12 @@
 ### atom [file-name]
   + will open the file [file-name] in Atom
 
+### open [file-name]
+  + will open the file [file-name] in the program "which makes most sense" depending on the file type
+
+### cat [file-name]
+  + will print the content of the file [file-name] to the terminal
+
 ### git status
   + ...
   + _it is useful to use this command before & after committing_ and _pushing files to the repo, to ensure that you are adding and removing the correct files_
@@ -37,6 +50,9 @@
 #### git add .
   + will add everything within the current directory to the commit [pile]
 
+<!-- #### git add . -p
+  +  -->
+
 #### git rm <file-name>
   + will add instructions to the commit [pile] to remove [file-name] from the repo
 
@@ -46,6 +62,17 @@
 
 ### git push
   + pushes the committed items to GitHub
+
+### git checkout -b [branch-name]
+  + create & move to a new branch named [branch-name]
+
+### git checkout [branch-name]
+  + move to branch [branch-name]
+
+### git branch
+  + will list all the branches in the repo && indicate which is the current one
+<!-- ### git log
+  + will display the repo log within the terminal -->
 
 ## Other commands
 
