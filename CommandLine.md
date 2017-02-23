@@ -63,6 +63,8 @@
 ### git push
   + pushes the committed items to GitHub
 
+## Branches and Collaborating commands
+
 ### git checkout -b [branch-name]
   + create & move to a new branch named [branch-name]
 
