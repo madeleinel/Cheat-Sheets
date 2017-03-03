@@ -83,6 +83,9 @@
     + will display the repo log within the terminal
     + exit using command 'q' -->
 
+  <!-- ### To clone single branch, try:   (although cloning the entire repo should clone all different branches as well >> use 'git branch' to check which  branches are available locally)
+    +git clone <url> --branch <branch> --single-branch [<folder>] -->
+
 ## Other commands
 
 #### python --version
