@@ -61,7 +61,7 @@ A pseudo-class selector is a way of accessing HTML items that aren't part of the
 Pseudo-class selectors let us style these kinds of changes in our HTML document. For example, we saw we could change a link's text-decoration property to make it something other than blue and underlined. Using pseudo selectors, you can control the appearance of unvisited and visited links—even links the user is hovering over but hasn't clicked!
 
 Eg:  
-To style a you're hovering your mouse over:
+To style a link you're hovering your mouse over:
 ```
 a:hover {
   color: purple;
