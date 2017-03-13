@@ -26,16 +26,23 @@ All HTML5 documents require the following layout:
 ### Tags
 Indicates HTML elements; eg "p" for paragraphs, "div" for div's, "span" for spans.  
 The tags either contain content or express content.  
-Some tags are self-closing (eg "img") and others require a closing tag after the content (eg "p").  
-The start tag can also contain additional information; eg attributes (usually a name & it's corresponsing value):
-```
-<div class = "main">
-```
-> "class" = the attribute name  
-> "main" = the value of the attribute (in this case, the class name of the div)
+Some tags are self-closing (eg "img") and others require a closing tag after the content (eg "p").
 
 #### Semantic tags
 Predefined HTML elements for different types of content; eg "p" for paragraphs, "img" for images.
+
+### Attributes  
+The start tag can also contain additional information about the element; eg attributes (usually a name & its corresponsing value):
+```
+<div class = "main">
+<a href="url">
+<img src="img">
+```
+> "class", "href", "src" = the attribute name  
+> "main", "url", "img" = the value of the attribute (in this case, the class name of the div)
+
+### Class and ID selectors
+Class and ID attributes (and some other attributes) can be added to any tag.
 
 ### Div's
 Allows you to divide the page into containers that can be styled individually.
