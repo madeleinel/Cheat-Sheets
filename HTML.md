@@ -1,6 +1,41 @@
 # HTML Cheat Sheet
 
+## Basic HTML document structure
+All HTML5 documents require the following layout:
+
+```
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Page title</title>
+  </head>
+
+  <body>
+  </body>
+
+</html>
+```
+"!DOCTYPE" > Tells the browser what version of HTML you're using.  
+"head tag" > Contains information about the page.  
+"body tag" > Contains the content being displayed on the page.
+"title tag" within the "head tag" > Will be displayed in the browser bar.
+
 ## Basic components
+
+### Tags
+Indicates HTML elements; eg "p" for paragraphs, "div" for div's, "span" for spans.  
+The tags either contain content or express content.  
+Some tags are self-closing (eg "img") and others require a closing tag after the content (eg "p").  
+The start tag can also contain additional information; eg attributes (usually a name & it's corresponsing value):
+```
+<div class = "main">
+```
+> "class" = the attribute name  
+> "main" = the value of the attribute (in this case, the class name of the div)
+
+#### Semantic tags
+Predefined HTML elements for different types of content; eg "p" for paragraphs, "img" for images.
 
 ### Div's
 Allows you to divide the page into containers that can be styled individually.

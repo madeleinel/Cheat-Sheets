@@ -327,7 +327,45 @@ Automatically / Universally, each div is given a top margin of 40px, and top & b
 ## Vendor prefixes
 Required for new features, such as gradients, transitions, flexbox, etc., to ensure that they can display within each/all browsers.
 
+## Links
 
+### Absolute links
+Link to the full URL of the resource.  
+Have to start with "http" or "https".  
+Can be used to link resources held on different sites. Should not be used to link to resources within the current site.  
+Fragile > won't work if the URL/domain name of the hosting site changes.  
+Won't work when developing locally.
+```
+in HTML:
+  <link rel="stylesheet" type="text/css" href="[full url]">
+in CSS:
+  background-image: url("[full URL]");
+```
+
+### Root-relative links
+Link to resources by using it's path relative to the site's root (often the folder that contains the site).  
+Have to start with "/".  
+More flexible than absolute links > eg not affected by a change of domain name/URL of the site.  
+Can be useful for static sites.  
+May not work when developing locally, as the root will be assumed to be the root of the file system, rather than the folder containing the site.
+If eg the root folder contains a folder called "folder-name":
+```
+in HTML:
+  <link rel="stylesheet" type="text/css" href="/folder-name/file-name.css">
+in CSS:
+  background-image: url("/folder-name/file-name.jpg");
+```
+
+### Document-relative links *
+Link to resources by using it's path relative to the file which contains the link.  
+To link resources within the same folder, simply state the file name. Use "../" to jump up one directory/folder.  
+This is the most flexible type of links, and they will work when developing locally. However, if files or folders are moved, the link paths need to be updated.
+```
+in HTML:
+  <link rel="stylesheet" type="text/css" href="../folder-name/file-name.css">
+in CSS:
+  background-image: url("../folder-name/file-name.jpg");
+```
 
 
 
