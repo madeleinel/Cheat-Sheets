@@ -44,16 +44,17 @@ The start tag can also contain additional information about the element; eg attr
 ### Class and ID selectors
 Class and ID attributes (and some other attributes) can be added to any tag.
 
-### Div's
-Allows you to divide the page into containers that can be styled individually.
+### Div
+Allows you to divide the page into parts that can be styled individually.  
+It creates block-level elements; ie it will start a new line before and after it (unlike spans).
 ```
 <div class="className">Text</div>
 <div id="idName">Text</div>
 ```
 
-### Span's
+### Span
 Allows you to control the styling of smaller parts of the page, eg individual words of pieces of text.  
-They're inline, ie don't add line breaks or spaces around the content within the span (as eg div's do).  
+It creates inline elements; ie don't add line breaks or spaces around the content within the span (as eg divs do).  
 Eg, wrapping the first word of each paragraph in span tags allows you to style those words separately from the rest of the paragraph.
 ```
 <p>Here is a sentence with <span>text</span></p>

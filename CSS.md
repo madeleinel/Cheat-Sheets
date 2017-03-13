@@ -34,6 +34,12 @@ Eg:
 }
 ```
 Creates a two-pixel wide solid black border around every element on the HTML page.
+```
+#article * {
+  border: 2px solid purple;
+}
+```
+Creates a two-pixel wide solid purple border around every element with the "article" ID.
 
 ### Selectors within Selectors
 

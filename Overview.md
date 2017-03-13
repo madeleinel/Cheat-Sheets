@@ -80,6 +80,31 @@ HTML DOM
 	> Represents the document/site as a node tree > each node represents a part of the document (so it tells the browser where to look for a specific thing within the document)
 	> Very useful for software development, using e.g. JavaScript
 
+## Terms
+(Development concepts)
+
+### Frameworks
+A framework is a platform for developing software applications; it provides a foundation on which you can build programs for a specific platform; it serves as a foundation for programming.  
+It helps streamline the development process, as it means you don't need to "reinvent the wheel" each time you develop a new application.  
+It may include predefined classes and functions, that can be used to process input, manage hardware devices and interact with system software.  
+A frameworks includes an API, and may also include code libraries, a compiler, and other programs used in the software development process.
+
+### APIs
+Application Programming Interface.  
+An API is a set of commands, functions, protocols of objects that you can use to create software or interact with an external system.  
+It provides developers with standard commands for performing common operations, so that they don't have to write the code from scratch.  
+Website APIs are typically more basic (than operating system APIs), and usually allow developers to access specific information from their site; it may be only a set of XML elements and some basic commands for retrieving the information.
+
+### Libraries
+A library is a suite of data and programming code, that is used to develop programs and applications. It assists the programmer and the compiler in building and executing software.  
+It generally consists of prewritten code, classes, procedures, scripts, configuration data, and more.  
+It can be manually added to a program to achieve more functionality, or to automate a process (without writing code for it.) Eg, if developing a mathematical application, adding a mathematical software library will eliminate the need for writing complex functions, as the functions within the software library can be called upon/used within the program.
+
+### Toolkits
+Toolkits are are used to develop and maintain applications and databases.  
+A toolkit can be a single utility program, a set of software routines, or a complete integrated set of software utilities.  
+There are toolkits for developing almost anything.
+
 ## Languages
 
 ### JavaScript
