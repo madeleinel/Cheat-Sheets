@@ -42,6 +42,12 @@
   + ...
   + _it is useful to use this command before & after committing_ and _pushing files to the repo, to ensure that you are adding and removing the correct files_
 
+### git whatchanged
+  + will display the most recent commit
+    + the commit message
+    + the changed files (added, removed, modified, etc)
+    + exit through "q"
+
 ## Adding to GitHub
 
 ### git add --all .

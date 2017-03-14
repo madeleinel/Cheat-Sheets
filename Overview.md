@@ -116,7 +116,40 @@ There are toolkits for developing almost anything.
 Web development framework written in Javascript.
 
 #### jQuery
-A JavaScript library.
+A JavaScript library.  
+Need to link to it within the HTML document, at the end of the body tag (so same as for linking to JavaScript files.)  
+(Eg) Makes it easy to make JS code work in the same way in different browsers.  
+Eg to get an element:  
+In JavaScript:
+```
+document.addEventListener("DOMContentLoaded", function makeTitleStandOut() {
+  const title = document.getElementById("title");
+  title.style.fontSize = "48px";
+
+  const header = document.getElementByTagName("h1")[0];   // will only target the first h1 on the page
+                                                          // (if want to target all elements with that tag name > need to create a loop)
+  header.style.color = "purple";
+});
+```
+In jQuery:  
+Using "$" > Tells the browser that you are going to use the jQuery library.
+```
+$(document).ready(function makeTitleStandOut() {
+  $("#title").css({"font-size: 48px"});
+
+  $("h1").addClass("purpleColor")   // will target all h1's on the page
+                                    // also need to add to the CSS file: ".purpleColor { color: purple; }"
+  });
+```
+Tell the browser to only run function "now" when everything else is ready/has loaded: (necessary to do this when linking to the JS script at the end of the body tag?)  
+In JavaScript:
+```
+document.addEventListener("DOMContentLoaded", function now());
+```
+In jQuery:
+```
+$(document).ready(function now())
+```
 
 ### Angular.js
 

@@ -1,5 +1,12 @@
 # JavaScript Cheat Sheet
 
+## To run JavaScript
+To tell the site to only run the function "now" when the content of the page has been loaded(?)  
+(Necessary to do this when linking to the JS script at the end of the body tag?)
+```
+document.addEventListener("DOMContentLoaded", function now() {});
+```
+
 ## Common Terms
 console.log();
 console.table();
