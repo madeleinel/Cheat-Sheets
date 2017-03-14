@@ -7,6 +7,10 @@ To tell the site to only run the function "now" when the content of the page has
 document.addEventListener("DOMContentLoaded", function now() {});
 ```
 
+## Indicating JS within the HTML file
+If going to target an HTML element through JavaScript, eg through its ID name, it's useful to include "js" within the ID name, to make it clearer for people reading the code that the element (& some of its styling) will be targeted/manipulated through JS.  
+Eg "#js-increase-size" rather than "#increase-size".
+
 ## Common Terms
 console.log();
 console.table();

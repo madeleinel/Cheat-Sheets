@@ -1,0 +1,16 @@
+body {
+	background-color: #d3d3d3 ;
+	margin: 5px;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+.animateMe {
+	margin-top: 10px;
+	padding-top: 10px;
+	background-color: blue;
+	height: 100px;
+	width: 100px;
+	color: white;
+	text-align: center;
+}

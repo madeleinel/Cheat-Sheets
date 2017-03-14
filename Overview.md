@@ -117,6 +117,13 @@ Web development framework written in Javascript.
 
 #### jQuery
 A JavaScript library.  
+Either download the library and link to it, or link to it from a Content Delivery Network (CDN) using:
+```
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+```
+Negatives:
++ Less transferrable than JavaScript
++ Can increase page load, as library is very large, but usually only use a small part of it for each site.  
 Need to link to it within the HTML document, at the end of the body tag (so same as for linking to JavaScript files.)  
 (Eg) Makes it easy to make JS code work in the same way in different browsers.  
 Eg to get an element:  
@@ -126,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function makeTitleStandOut() {
   const title = document.getElementById("title");
   title.style.fontSize = "48px";
 
-  const header = document.getElementByTagName("h1")[0];   // will only target the first h1 on the page
+  const header = document.getElementByTagName("h1")[0];   // will only target the first h1 on the page (works for getElementByTagName and -ClassName)
                                                           // (if want to target all elements with that tag name > need to create a loop)
   header.style.color = "purple";
 });
