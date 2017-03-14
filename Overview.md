@@ -85,9 +85,12 @@ HTML DOM
 
 ### Frameworks
 A framework is a platform for developing software applications; it provides a foundation on which you can build programs for a specific platform; it serves as a foundation for programming.  
-It helps streamline the development process, as it means you don't need to "reinvent the wheel" each time you develop a new application.  
+Web application frameworks are designed to support the development of dynamic websites and applications.  
+It helps streamline the development process, as it means you don't need to "reinvent the wheel" each time you develop a new application. It lets you benefit from peer-reviewed, tested and pre-written functionalities, which saves time and hassle.  
 It may include predefined classes and functions, that can be used to process input, manage hardware devices and interact with system software.  
 A frameworks includes an API, and may also include code libraries, a compiler, and other programs used in the software development process.  
+It contains common code which provides generic functionality, which can be selectively overridden or specialised by user code to provide specific functionality (extensibility.)  
+"A special type of software libraries; frameworks are reusable abstractions of code wrapped in a well-defined API."
 
 ### APIs
 Application Programming Interface.  
@@ -96,12 +99,12 @@ It provides developers with standard commands for performing common operations, 
 Website APIs are typically more basic (than operating system APIs), and usually allow developers to access specific information from their site; it may be only a set of XML elements and some basic commands for retrieving the information.
 
 ### Libraries
-A library is a suite of data and programming code, that is used to develop programs and applications. It assists the programmer and the compiler in building and executing software.  
-It generally consists of prewritten code, classes, procedures, scripts, configuration data, and more.  
+A library is an implementation of an API; it's a suite of data and programming code that is used to develop programs and applications. It assists the programmer and the compiler in building and executing software.  
+It generally consists of prewritten code, classes, procedures, scripts, configuration data (and more) that developers can call upon.  
 It can be manually added to a program to achieve more functionality, or to automate a process (without writing code for it.) Eg, if developing a mathematical application, adding a mathematical software library will eliminate the need for writing complex functions, as the functions within the software library can be called upon/used within the program.
 
 ### Toolkits
-Toolkits are are used to develop and maintain applications and databases.  
+Toolkits are sets of libraries (APIs) and services grouped together; they provide a developers with a wider range of possible solutions, and are used to develop and maintain applications and databases.  
 A toolkit can be a single utility program, a set of software routines, or a complete integrated set of software utilities.  
 There are toolkits for developing almost anything.
 
