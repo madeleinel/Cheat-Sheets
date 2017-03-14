@@ -21,6 +21,16 @@ All HTML5 documents require the following layout:
 "body tag" > Contains the content being displayed on the page.
 "title tag" within the "head tag" > Will be displayed in the browser bar.
 
+## Head tags to include
+To ensure proper rendering and touch zooming for mobile devices:
+```
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+To disable zooming capabilities on mobile devices, add user-scalable=no to the viewport meta tag. This disables zooming, meaning users are only able to scroll, and results in the site feeling a bit more like a native application. Not recommended for every site; use caution!
+```
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+```
+
 ## Basic components
 
 ### Tags

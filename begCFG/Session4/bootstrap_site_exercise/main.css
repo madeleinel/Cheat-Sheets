@@ -1,0 +1,36 @@
+/*Use this file to add stylings, && overwrite Twitter Bootstrap stylings as necessary*/
+
+body {
+  padding-top: 70px;
+}
+
+#social-buttons button {
+  color: white;
+}
+
+.btn-twitter {
+  background-color: #00acee;
+  border-color: #009ad5;
+}
+
+.btn-facebook {
+  background-color: #4868ac;
+  border-color: #314776;
+}
+
+.btn-pinterest {
+  background-color: #b62f26;
+  border-color: #b62f26;
+}
+
+.jumbotron {
+  min-height: 600px;
+  background-image: url("images/fruit-and-veg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#mission {
+  background-color: rgba(32, 35, 41, 0.9);
+  color: #ddd;
+}

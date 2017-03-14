@@ -87,7 +87,7 @@ HTML DOM
 A framework is a platform for developing software applications; it provides a foundation on which you can build programs for a specific platform; it serves as a foundation for programming.  
 It helps streamline the development process, as it means you don't need to "reinvent the wheel" each time you develop a new application.  
 It may include predefined classes and functions, that can be used to process input, manage hardware devices and interact with system software.  
-A frameworks includes an API, and may also include code libraries, a compiler, and other programs used in the software development process.
+A frameworks includes an API, and may also include code libraries, a compiler, and other programs used in the software development process.  
 
 ### APIs
 Application Programming Interface.  
@@ -112,6 +112,9 @@ There are toolkits for developing almost anything.
 #### Node.js
 Web development framework written in Javascript.
 
+#### jQuery
+A JavaScript library.
+
 ### Angular.js
 
 ### Python
@@ -124,9 +127,23 @@ Web development framework written in Python.
 #### Ruby on Rails
 Web development framework written in Ruby.
 
-## Bootstrap
+## APIs
 
 ### Twitter API
+
+## Bootstrap
+
+### Twitter Bootstrap
+[The Twitter Bootstrap](http://getbootstrap.com/) is a web application framework.  
+It promotes a mobile-first approach to designing websites, encouraging you to design the site so that it looks good on all screen sizes from the beginning. It is built on a grid system consisting of 12 columns, and lets you customise the size of the HTML elements as a fraction of 12. The grid system is 'responsive, mobile-first and fluid.'  
+It is used by [linking to the bootstrap stylesheet in the HTML document head tag](http://getbootstrap.com/getting-started/#download-cdn) (can be done with or without downloading Bootstrap), and [adding the relevant attributes to the HTML elements](http://getbootstrap.com/css/).  
+Using it makes it easier to create responsive and cross-browser-friendly websites. It can also be used to easily get an [HTML starter template](http://getbootstrap.com/examples/starter-template/) and [add site components](http://getbootstrap.com/components/), eg responsive nav bars.  
+Eg:
++ Use ".container" to center the element and provide it with sensible page margins
++ Create a column layout by using ".col-sm-4" or ".col-md-6" etc
+  + col > specifies it should be a column in the grid system
+  + sm & md > specifies at which screen width the class should be implemented
+  + 4 & 6 > specifies how many of the 12 columns should be taken up by the element
 
 ## Testing Frameworks
 
