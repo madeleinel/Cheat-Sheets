@@ -64,8 +64,9 @@ Not equal to
 #### Less than or Greater then
 < or > or >= or >=  
 ```
-5 < 6   // will return True
-2 >= 4   // will return False
+5 < 6                                     // will return True
+2 >= 4                                    // will return False
+"hi there".length > "hello there".length  // will return False  (string.length will count all characters, alphabetical and non-alphabetical)
 ```
 
 ### Booleans

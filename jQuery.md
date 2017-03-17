@@ -10,7 +10,7 @@ Negatives:
 + Less transferrable than JavaScript
 + Can increase page load, as library is very large, but usually only use a small part of it for each site.  
 Need to link to it within the HTML document, at the end of the body tag (so same as for linking to JavaScript files.)  
-(Eg) Makes it easy to make JS code work in the same way in different browsers. 
+(Eg) Makes it easy to make JS code work in the same way in different browsers.
 
 ## JavaScript vs jQuery
 Eg to get an element:  
@@ -44,6 +44,13 @@ In jQuery:
 ```
 $(document).ready(function now())
 ```
+
+<!-- ## try.jquery.com -->
+
+
+
+
+
 
 ## Show or Hide image description (using jQuery)
 Including 'sliding effect' defined in CSS.
