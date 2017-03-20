@@ -67,7 +67,7 @@ her_name_third_time = "Her name is {word} and she is {number} years old".format(
 her_name_fourth_time = "Her name is %s and she is %d years old" % (name, age)
 ```
 
-### Changing varibles input into a string
+### Changing varibles' input into a string
 Once variables has been "baked into" a string, changing the variable won't update the string; need to restate the string to do this. Eg:
 ```
 name = "Dave"
@@ -80,3 +80,44 @@ name = "Sarah"
 hello = "hello {0}".format(name)
 /* > print hello > "hello Sarah" */
 ```
+
+## Input through the command line
+Code that takes input from the command line and "does something with it."
+
+### Getting data from the command line (ex11)
+```
+value = raw_input()
+```
+will assign a value entered through the command line. This will get the value as a string (even if a number is entered; so if adding two variables will concatenate them as two strings, rather than performing a mathematical operation.)  
+Eg for typing the following in a python file & running it in the command line:
+```
+print "What's your name?",
+name = raw_input()
+print "My name is {}".format(name)
+
+/* If input "Madde" on the command line > will print "My name is Madde" */
+/* Adding "," at the end of the "print" line will make the "raw_input" go on the same line (rather than a new line) */
+
+print "x should be",
+x = raw_input()
+print "y should be",
+y = raw_input()
+print (x + y)
+
+/* If input x=2 and y=3 > will print "23" (rather than "5") */
+```
+
+### Prompts in the command line (ex12)
+The prompts can also be put directly inside "raw_input", thus avoiding having to print the question before the "raw_input", eg:
+```
+name = raw_input("What's your name? ")
+print "My name is {}".format(name)
+
+x = raw_input("x should be ")
+y = raw_input("y should be ")
+print (x + y)
+
+/* These will both display in the command line in the same way as the above examples (in "Getting data from the command line") */
+```
+
+### Prompting and passing (ex14)
