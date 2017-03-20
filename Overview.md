@@ -96,6 +96,7 @@ It provides developers with standard commands for performing common operations, 
 Website APIs are typically more basic (than operating system APIs), and usually allow developers to access specific information from their site; it may be only a set of XML elements and some basic commands for retrieving the information.
 
 ### Libraries
+A collection of code to be re-used. Can eg be used to provide web server functionality to a web project (rather than having to write it from scratch.)  
 A library is an implementation of an API; it's a suite of data and programming code that is used to develop programs and applications. It assists the programmer and the compiler in building and executing software.  
 It generally consists of prewritten code, classes, procedures, scripts, configuration data (and more) that developers can call upon.  
 It can be manually added to a program to achieve more functionality, or to automate a process (without writing code for it.) Eg, if developing a mathematical application, adding a mathematical software library will eliminate the need for writing complex functions, as the functions within the software library can be called upon/used within the program.
