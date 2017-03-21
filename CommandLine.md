@@ -85,6 +85,11 @@
   + 'git push' alone will not make the new branch (& its material) appear on github
     + NOTE: After doing this & having completed the merge onto the 'master' branch, should switch back to the 'master' branch on the computer and use 'git pull', to ensure that the 'master' branch is up to date locally
 
+### git pull origin master
+  + To update a local branch with the content on the Master branch (in the terminal):
+    + Go to the Master branch > 'git pull'
+    + Go to the relevant branch > 'git pull origin Master'
+
   <!-- ### git log
     + will display the repo log within the terminal
     + exit using command 'q' -->
