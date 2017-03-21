@@ -84,7 +84,7 @@ hello = "hello {0}".format(name)
 ## Input through the command line
 Code that takes input from the command line and "does something with it."
 
-### Getting data from the command line (ex11)
+### Getting data from the command line: raw_input (ex11)
 ```
 value = raw_input()
 ```
@@ -120,4 +120,151 @@ print (x + y)
 /* These will both display in the command line in the same way as the above examples (in "Getting data from the command line") */
 ```
 
-### Prompting and passing (ex14)
+## Importing modules
+Importing only what the program needs helps keep the program small, and is useful for other developers to quickly gain an overview over what has been used within the code (the list of imports acts as documentation).
+
+### Importing modules: argv (ex13)
+The argument variable; holds the arguments passed to the Python script when calling it in the command line.  
+Assigning "argv" to variables "unpacks" these values and make the easier to work with (like saying "Take whatever is in argv, unpack it, and assign it to all of these variables on the left in order.")  
+When running these scripts, they need to be run with command line arguments.  
+Eg:
+```
+from sys import argv
+script, argument = argv
+print "The script is called", script
+print "This is the argument:", argument
+
+<!-- Passing the following in the command line (note that it's including command line arguments, rather than just running "python [file-name]"):
+
+"python [file-name] [argument-value]"
+will display the following within the command line:
+"The script is called [file-name]
+This is the argument: [argument-value]" -->
+```
+As with "raw_input()", "argv" will get the value as a string (even if a number is entered; so if adding two variables will concatenate them as two strings, rather than performing a mathematical operation.)
+
+### raw_input() vs argv
+The difference between "raw_input()" and "argv" has to do with where the user is required to give input.  
+If giving script inputs on the command line: use "argv".  
+If giving script input using the keyboard while the script is running: use "raw_input()".  
+They both get the values as a string (even if a number is entered; so if adding two variables will concatenate them as two strings, rather than performing a mathematical operation.)
+
+### Combining raw_input() and argv: Prompting and passing (ex14)
+"raw_input()" and "argv" can be combined to make the output more specific. Eg:
+```
+from sys import argv
+
+script, user_name = argv
+prompt = "> "
+
+print "Hi {}, this is the {} script. I'd like to ask you a few questions.".format(user_name, script)
+print "What kind of computer do you have?"
+computer = raw_input(prompt)
+
+print """
+Glad to hear you're using a good {} computer, {}!
+""".format(computer, user_name)
+
+<!-- If running "python [file-name] Anna", and then entering "Apple" when asked about computer type, the following will display in the command line:
+
+"Hi Anna, this is the [file-name] script. I'd like to ask you a few questions.
+What kind of computer do you have?
+> Apple
+Glad to hear you're using a good Apple computer, Anna!" -->
+```
+Setting "prompt" to "> " will indicate where input should be provided by displaying "> " on that line.
+
+## Functions
+Create functions in Python by using "def".  
+Functions in Python don't using closing brackets or anything similar; instead, it uses indentation to indicate whether the function is open or closed (ie the function is closed by going to back to not indenting the code (ie "dedenting")).  
+Eg the following functions will print "Hi there!" and "Hello there Anna!" in the command line:
+```
+def hi():
+  print "Hi there!"
+
+def hello(name):
+  print "Hello there " + name + "!"
+
+hi()
+hello("Anna")
+
+<!-- Note that: hi() takes no argument, and hello() does -->
+```
+
+### Functions and variables
+Variables can be passed into functions in several different ways.  
+Eg for the function "example":
+```
+def example(arg1, arg2):
+  print "arg1 is {}".format(arg1)
+  print "arg2 is {}".format(arg2)
+```
+It can be called by passing the arguments directly into the function:
+```
+example("Hello", "Hello again")
+
+<!-- Will print:
+"arg1 is Hello
+arg2 is Hello again" -->
+```
+It can be called by calling on variables containing the values:
+```
+argument_1 = "Hi"
+argument_2 = "Hi again"
+
+example(argument_1, argument_2)
+
+<!-- Will print:
+"arg1 is Hi
+arg2 is Hi again" -->
+```
+If passing it integers, we can both use mathematical operators, and combine variables and mathematical operators. Eg:
+```
+example(1+2, 3+4)
+
+<!-- Will print:
+"arg1 is 3
+arg2 is 7" -->
+
+argument1 = 5
+argument2 = 6
+
+example(argument1 + 2, argument2 + 4)
+
+<!-- Will print:
+"arg1 is 7
+arg2 is 10" -->
+```
+
+### Using functions to return a value
+Use "return" to make a function return something / set a variable to be a value from a function.  
+Eg:
+```
+def add(a, b):
+  return a + b
+
+<!-- the function "add" returns "a+b" > this can then be assigned to a variable, eg the variable "result" -->
+
+result = add(3, 4)
+
+print result
+
+<!-- Will display "7" within the terminal -->
+```
+The return value of one function can also be used as an argument in another function. Chaining functions like this can be used "to create a formula using the functions." Eg:
+```
+def add(a, b):
+    return a + b
+
+age = add(3, 4)
+<!-- age = 7 -->
+
+def subtract(c, d):
+    return c - d
+
+example = add(age, subtract(6, 2))
+<!-- ie example = add(7, (6-2)) = add(7, 4) = (7 + 4) = 11 -->
+
+print example
+<!-- Will display "11" -->
+```
