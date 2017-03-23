@@ -17,16 +17,30 @@ Contains words, sentences, etc.
 ### Integer
 Whole numbers, eg "3".
 
-### Modulus / Remainder
-Will return the remainder of a division, eg "10/3 = 3 with a remainder of 1" > "10%3 = 1".
-
 ### Float
 Numbers using decimal points, eg "3.333".
 
 ## Misc useful commands
 
 print
-mathematical operators
+### Mathematical operators
+
+#### +=
+The "increment by" operator
+```
+x += 1
+```
+is equal to:
+```
+x = x + 1
+```
+Ie it adds "1" to the value of x.
+
+#### Modulus / Remainder
+Will return the remainder of a division, eg:
+```
+"10/3 = 3 with a remainder of 1" > "10%3 = 1"
+```
 
 ## String methods
 When a method is attached to a string, it causes Python to do the relevant processing on the string. Eg:
@@ -267,4 +281,115 @@ example = add(age, subtract(6, 2))
 
 print example
 <!-- Will display "11" -->
+```
+
+## Logic
+
+### Logical operators
+Logical operators can be used in Python to determine whether an expression is True or False (Booleans).  
+Eg ==, !=, <=, >=, "True or False", "True and False". Eg:
+```
+<!-- Command > "Will print" -->
+1 != 0 > "True"
+1 == 0 > "False"
+
+"test" == "test" > True
+"test" != "example" > True
+"test" and "test" > "test"
+"test" and "example" > "example"
+1 and 1 > "1"
+3 and 4 > "4"
+
+True or False > "True"
+True and False > "False"
+True or True > "True"
+True and True > "True"
+
+1 == 1 and 2 == 1 > [True and False] > "False"
+not (1 == 1 and 0 != 1) > [not (True and True)] > not (True) > "False"
+```
+
+#### Shortcuts:
+Any "and" expression that includes "False" > "False"
+Any "or" expression that includes "True" > "True"
+
+### Number ranges
+The following commands can be used to check whether a value is within a range of numbers:
+```
+<!-- To check whether "x" is a value between 1 and 10: -->
+0 < x < 10
+1 <= x < 10
+x in range(1, 10)
+```
+
+### Decision-making using If / Else statements
+
+#### If statements
+"If statements create branches within the code." Ie it tells your script to perform the assigned actions IF the specified Boolean expression is True.  
+Same as for function, it's the indentation that tells the script which code is held within the If statement.
+```
+ten = 10
+twenty = 20
+
+if ten > twenty:
+    print "ten is greater than twenty"
+if ten < twenty:
+    print "twenty is greater than ten"
+
+<!-- Will print: "twenty is greater than ten" -->
+
+thirty += 5
+if thirty >= twenty:
+    print "35 is greater than or equal to 20"
+if thirty <= twenty:
+    print "35 is lesser than or equal to 20"
+
+<!-- Will print: "35 is greater than or equal to 20" -->
+```
+
+#### Else / If statements
++ "if [boolean]" > "if [boolean] is true, do this"
++ "elif [boolean]" > "else if [boolean] is true, do this"
++ "else" > "if none of the above are true, do this"
+As the script runs from top to bottom: For Else / If statements that include several "elif" boolans > it will only run the first one it encounters.  
+The above code can also be written as:
+```
+ten = 10
+twenty = 20
+
+if ten > twenty:
+    print "ten is greater than twenty"
+elif ten < twenty:
+    print "twenty is greater than ten"
+else:
+    print "the two integers can't be compared"
+
+<!-- Will print: "twenty is greater than ten" -->
+```
+
+#### Combining raw_input() and If / Else statements
+These commands can be combined to create a "create-your-own-adventure."  
+If statements can be nested inside other If statements to create "nested decisions", with different branches leading to other branches, and so forth.  
+Eg:
+```
+print "you are presented with a narrow path and a wide path. Which one do you choose?"
+
+path = raw_input("> ")
+
+if path == "narrow":
+    print "the path seems a bit narrow for your canoe. You can choose to either swim or take the canoe. Which do you choose?"
+    print "1. Swim"
+    print "2. Take the canoe"
+
+    transport = raw_input("> ")
+
+    if transport == "1":
+        print "good choice; you swim down the path to the beach"
+    elif transport == "2":
+        print "the path is too narrow to navigate the canoe; you get stuck"
+    else:
+        print "that was not one of the options..."
+
+if path == "wide":
+    print "good choice: now you can stay dry in your canoe"
 ```

@@ -96,4 +96,62 @@
 #
 # ------------
 #
-# Ex__:
+# Ex29:
+#
+# ten = 10
+# twenty = 20
+# thirty = 30
+#
+# if ten > twenty:
+#     print "ten is greater than twenty"
+#
+# if ten < twenty:
+#     print "twenty is greater than ten"
+#
+# thirty += 5
+#
+# print "thirty is now 35"
+# print thirty
+#
+# if thirty >= twenty:
+#     print "35 is greater than or equal to 20"
+#
+# if twenty <= ten:
+#     print "20 is lesser than or equal to 10"
+#
+# ------------
+#
+# Ex30:
+#
+# ten = 10
+# twenty = 20
+#
+# if ten > twenty:
+#     print "ten is greater than twenty"
+# elif ten < twenty:
+#     print "twenty is greater than ten"
+# else:
+#     print "the two integers can't be compared"
+#
+# ------------
+#
+# Ex31:
+#
+# print "you are presented with a narrow path and a wide path. Which one do you choose?"
+# path = raw_input("> ")
+#
+# if path == "narrow":
+#     print "the path seems a bit narrow for your canoe. You can choose to either swim or take the canoe. Which do you choose?"
+#     print "1. Swim"
+#     print "2. Take the canoe"
+#     transport = raw_input("> ")
+#
+#     if transport == "1":
+#         print "good choice; you swim down the path to the beach"
+#     elif transport == "2":
+#         print "the path is too narrow to navigate the canoe; you get stuck"
+#     else:
+#         print "that was not one of the options..."
+#
+# if path == "wide":
+#     print "good choice: now you can stay dry in your canoe"
