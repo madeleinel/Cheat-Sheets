@@ -148,7 +148,14 @@ Eg:
   + 4 & 6 > specifies how many of the 12 columns should be taken up by the element
 
 ## Testing Frameworks
+Can use framework for testing your code, eg for Test-Driven Development.  
+Can involve testing framework API, test doubles ("spying" on selected functions), asynchronous testing, and test runners, fake servers (which eg allows you to set up fake responses to AJAX requests made for certain URLs.)
+<!-- See eg https://www.codementor.io/javascript/tutorial/javascript-testing-framework-comparison-jasmine-vs-mocha -->
 
 ### Jasmine
+A JS testing framework.
+
+### Mocha
+A JS testing framework.
 
 ### Jingr (?)
