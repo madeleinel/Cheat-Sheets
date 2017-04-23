@@ -97,6 +97,46 @@
   <!-- ### To clone single branch, try:   (although cloning the entire repo should clone all different branches as well >> use 'git branch' to check which  branches are available locally)
     +git clone <url> --branch <branch> --single-branch [<folder>] -->
 
+## Heroku commands
+
+### git remote -v
+  + Lists all remote repos - github & heroku (if added)
+
+### heroku git:remote -a [heroku-app-name]
+  + Links to local repo to the remote heroku app
+
+### git push -f heroku master
+  + Force push to the heroku master branch
+
+### heroku info [heroku-app-name]
+  + Display info about the app
+
+### heroku logs --app [heroku-app-name]
+  + Display server logs for the app
+
+### git push heroku yourlocalbranch:master
+  + To push from the local repo branch to the heroku master branch
+
+### heroku open
+  + Will open the url from the terminal
+
+## Postgres commands
+
+### psql postgres
+  + Starts postgres session
+
+### ctrl + d		(or \q)
+  + Exits postgres session
+
+### psql [database-name]
+  + Starts the chosen database > requires the database to already exist
+
+### To create the database and database user:
+  + psql postgres
+  + CREATE DATABASE [database-name];
+  + CREATE USER [user-name] WITH PASSWORD '[password]';
+  + GRANT ALL PRIVILEGES ON DATABASE [database-name] TO [user-name];
+
 ## Other commands
 
 #### python --version
