@@ -90,9 +90,10 @@
     + Go to the Master branch > 'git pull'
     + Go to the relevant branch > 'git pull origin Master'
 
-  <!-- ### git log
-    + will display the repo log within the terminal
-    + exit using command 'q' -->
+  ### git log
+    + will display the repo log within the terminal (most recent on top)
+    + exit using command 'q'
+    + 'enter' to display more log items
 
   <!-- ### To clone single branch, try:   (although cloning the entire repo should clone all different branches as well >> use 'git branch' to check which  branches are available locally)
     +git clone <url> --branch <branch> --single-branch [<folder>] -->
