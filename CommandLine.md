@@ -48,6 +48,10 @@
     + the changed files (added, removed, modified, etc)
     + exit through "q"
 
+### git reset --hard origin/master
+  + will overwrite the local HEAD/master branch with the content of the remote master branch
+  + using "--hard" will ensure that the changes are synced into the index and workspace as well
+
 ## Adding to GitHub
 
 ### git add --all .
