@@ -32,7 +32,7 @@ Exits the Postgres session.
 ```
 psql [database-name]
 ```
-Starts the [database-name] datase (requires the database to already exist on the local server).
+Starts the [database-name] database (requires the database to already exist on the local server).
 
 ### To create a new database
 
@@ -79,6 +79,10 @@ CREATE TABLE Activities (
 
 +
 
+#### \d [table-name]
++ Displays the columns of the table, laying out the name, type and modifiers of each
++ Press 'q' to exit
+
 ### To edit existing tables
 
 #### SELECT * FROM [table-name];
@@ -123,7 +127,7 @@ CREATE TABLE [table-name] (
 data types:
   varchar(x) == column has a variable length, with max limit of x
   text == variable unlimited length
-  char(x) == column has fixed lenght, with max limit of x
+  char(x) == column has fixed length, with max limit of x
 
   <!-- According to postgresql.org (https://www.postgresql.org/docs/9.1/static/datatype-character.html) >> "There is no performance difference among these three types, apart from increased storage space when using the blank-padded type, and a few extra CPU cycles to check the length when storing into a length-constrained column. While character(n) has performance advantages in some other database systems, there is no such advantage in PostgreSQL; in fact character(n) is usually the slowest of the three because of its additional storage costs. In most situations text or character varying should be used instead." -->
 
