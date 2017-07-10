@@ -68,12 +68,13 @@ Eg:
 ```
 CREATE TABLE Activities (
   Activities_ID bigserial primary key,
-  Activities_Name varchar(10)
+  Activities_Name varchar(10) NOT NULL
   );
 ```
 + Creates a table names Activities which contains two columns:
   + The first column contains the acitivity ID; can only contain incrementing positive integers. (?)
   + The second column contains the activity name; can contain various characters, with a max limit of 10 characters.
++ ```NOT NULL``` Specifies that the column has to include some data, ie it is not allowed to contain null values.
 
 #### Table data types
 
@@ -107,11 +108,11 @@ INSERT INTO activities (id, name, time) VALUES
 INSERT INTO activities (name, time) VALUES
   [...];
 ```
-+ An ID number will be assigned automatically, starting at 1 (and increasing as i++).
-+ So if have already inserted records where we've specified the ID number, we will receive an error message when it tries to create a record with an ID number that already exists.
-  + Eg, if ID=1 already exists, then will receive an error message the first time using this command, as it will try setting ID=1, which has already been used.
-  + If we then run the exact same command over and over, it will try to set the ID number as 2, then 3, etc, until we find an ID number that is available
-+ If don't specify ID numbers from the beginning, each record will be automatically be assigned it's own unique ID value, starting from 1 (and increasing as i++).
+  + An ID number will be assigned automatically, starting at 1 (and increasing as i++).
+  + So if have already inserted records where we've specified the ID number, we will receive an error message when it tries to create a record with an ID number that already exists.
+    + Eg, if ID=1 already exists, then will receive an error message the first time using this command, as it will try setting ID=1, which has already been used.
+    + If we then run the exact same command over and over, it will try to set the ID number as 2, then 3, etc, until we find an ID number that is available
+  + If don't specify ID numbers from the beginning, each record will be automatically be assigned it's own unique ID value, starting from 1 (and increasing as i++).
 
 
 
@@ -130,9 +131,6 @@ data types:
   char(x) == column has fixed length, with max limit of x
 
   <!-- According to postgresql.org (https://www.postgresql.org/docs/9.1/static/datatype-character.html) >> "There is no performance difference among these three types, apart from increased storage space when using the blank-padded type, and a few extra CPU cycles to check the length when storing into a length-constrained column. While character(n) has performance advantages in some other database systems, there is no such advantage in PostgreSQL; in fact character(n) is usually the slowest of the three because of its additional storage costs. In most situations text or character varying should be used instead." -->
-
-Additional info:
-  NOT NULL == The column is not allowed to contain null values / the column has to include some data
 
 
 
