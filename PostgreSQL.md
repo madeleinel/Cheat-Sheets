@@ -8,13 +8,20 @@
 ## Basic PostgreSQL commands:
 
 ### To get started
-
+#### To set up and create a new database and user access
 ```
 psql postgres
 CREATE DATABASE womentor;
 CREATE USER madeleine WITH PASSWORD 'maliwome78’;
 GRANT ALL PRIVILEGES ON DATABASE womentor TO madeleine;
 \connect womentor;
+```
+
+#### To connect to and view an existing database table
+```
+psql postgres
+\connect [database-name]
+SELECT * FROM [table-name];
 ```
 
 ### Starting and exiting Postgres sessions
