@@ -24,6 +24,12 @@
 ### ls -a
   + will list everything - including hidden files - within the current directory
 
+### ls -lt
+...
+
+### ls -ltr
+...
+
 ### touch [file-name]
   + will create a file named [file-name] within the current directory
 
