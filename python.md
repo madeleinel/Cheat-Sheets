@@ -6,6 +6,9 @@
 Web (micro)framework for Python.  
 Based on Werkzeug and Jinja 2.
 
+### Django
+TBA
+
 ### pip
 Package management system used to install and manage software packages / libraries written in Python.  
 Can be used to install eg Flask.
