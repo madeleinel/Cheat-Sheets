@@ -1,61 +1,69 @@
 # PostgreSQL
 
-## Introduction
-+ What it's used for...
-+ Difference between database and server (eg laptop) - in terms of creating users etc.
-+ Have to end all lines with ';' >> if miss and press enter without it >> can add it on the next line and then press enter -- as lines not separated by a ';' are read as being the same line >> this can also be used to split up content onto separate lines to make them more easily readable, even if the code itself needs to be within the same line.
-
-## Basic PostgreSQL commands:
-
-### To get started
-#### To set up and create a new database and user access
+### Basic PostgreSQL commands
 ```
-psql postgres
-CREATE DATABASE womentor;
-CREATE USER madeleine WITH PASSWORD 'maliwome78’;
-GRANT ALL PRIVILEGES ON DATABASE womentor TO madeleine;
-\connect womentor;
+# Start Postgres
+$ psql postgres
+
+# Exit Postgres
+$ ctrl + d
+# OR
+$ \q
 ```
 
-#### To connect to and view an existing database table
+### Creating users, databases and granting access to databases
 ```
-psql postgres
-\connect [database-name]
-SELECT * FROM [table-name];
+# Create database
+$ CREATE DATABASE gorillas;
+
+# Create user
+$ CREATE USER jane_goodall WITH PASSWORD 'password’;
+
+# Grant access to the database
+$ GRANT ALL PRIVILEGES ON DATABASE gorillas TO jane_goodall;
+
+# Connect to the database
+$ \connect gorillas;
 ```
 
-### Starting and exiting Postgres sessions
-Commands to run within the command line:
+### List commands
 ```
-psql postgres
-```
-Starts a Postgres session.
-```
-ctrl + d
-OR
-\q
-```
-Exits the Postgres session.
-```
-psql [database-name]
-```
-Starts the [database-name] database (requires the database to already exist on the local server).
+# To view all local roles (ie users)
+$ \du
 
-### To create a new database
+# To view all local databases
+$ \l
 
-#### CREATE DATABASE [database-name];
-+ Creates a new database named [database-name].
+# When connected to a database; To view all relations (eg tables)
+$ \d
 
-#### CREATE USER [username] WITH PASSWORD ['password'];
-+ Creates this user on the server.
-+ So if creating a new database, and the user already exists on the server >> Can skip to the next step (ie granting database access to the user).
+# To view all entries within a table
+$ SELECT * FROM db_table;
 
-#### GRANT ALL PRIVILEGES ON DATABASE [database-name] TO [username];
-+ Connect the user to the database (ie grant them access to it and its data).
+# To view the first five entries within a table
+$ SELECT * FROM db_table WHERE ID<6;
 
-#### \connect [database-name];
-+ Connect to the database.
-+ Ensures that any following commands are conducted on the database [database-name]. (?)
+# To view all entries, ordered by the column entitled first_name
+$ SELECT * FROM db_table ORDER BY first_name;
+```
+
+### Delete commands
+```
+# To delete entry from a database
+$ DELETE FROM db_table WHERE ID=[ID_number];
+# OR
+$ DELETE FROM db_table WHERE ID>[ID_number];
+# OR
+$ DELETE FROM db_table WHERE ID IN([ID_number_1], [ID_number_2]);
+
+# To delete a table
+$ DROP TABLE db_table;
+
+# To delete a database
+$ DROP DATABASE database_name;
+```
+
+<!-- Notes to go through and clean up below -->
 
 ### To create a table
 ```
@@ -82,14 +90,6 @@ CREATE TABLE Activities (
   + The first column contains the acitivity ID; can only contain incrementing positive integers. (?)
   + The second column contains the activity name; can contain various characters, with a max limit of 10 characters.
 + ```NOT NULL``` Specifies that the column has to include some data, ie it is not allowed to contain null values.
-
-#### Table data types
-
-+
-
-#### \d [table-name]
-+ Displays the columns of the table, laying out the name, type and modifiers of each
-+ Press 'q' to exit
 
 ### To edit existing tables
 
@@ -121,8 +121,11 @@ INSERT INTO activities (name, time) VALUES
     + If we then run the exact same command over and over, it will try to set the ID number as 2, then 3, etc, until we find an ID number that is available
   + If don't specify ID numbers from the beginning, each record will be automatically be assigned it's own unique ID value, starting from 1 (and increasing as i++).
 
+### Other notes
 
-
++ What it's used for...
++ Difference between database and server (eg laptop) - in terms of creating users etc.
++ Have to end all lines with ';' >> if miss and press enter without it >> can add it on the next line and then press enter -- as lines not separated by a ';' are read as being the same line >> this can also be used to split up content onto separate lines to make them more easily readable, even if the code itself needs to be within the same line.
 
 <!-- Notes from codebar below -- some/a lot of duplicated notes -->
 
@@ -139,66 +142,9 @@ data types:
 
   <!-- According to postgresql.org (https://www.postgresql.org/docs/9.1/static/datatype-character.html) >> "There is no performance difference among these three types, apart from increased storage space when using the blank-padded type, and a few extra CPU cycles to check the length when storing into a length-constrained column. While character(n) has performance advantages in some other database systems, there is no such advantage in PostgreSQL; in fact character(n) is usually the slowest of the three because of its additional storage costs. In most situations text or character varying should be used instead." -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  To insert data into the table:
-  >> the type of quotes used MATTERS >> either type it directly in the command line or Atom
-
-  >> Can insert rows 1&2, then view table, and then add rows 3&4 separately
-  >> will insert most recent rows at the bottom >> so even if set e.g. ID (which has ‘primary key’ specified) >> will still insert most recent at the bottom, even if the ID # is lower than the second most recent entry
-
-  To delete one row:
-  DELETE FROM activities WHERE ID=[ID-number);
-
-  To delete several rows:
-  DELETE FROM activities WHERE ID IN([ID-number-1],[ID-number-2]);
-
   To update data within the table:
   UPDATE [table-name] SET [column-name-1]=[‘new value’] WHERE [column-name]=[value];
   UPDATE activities SET name='Bikeride', time='20days' WHERE ID=11;
   >> Best practice >> to update table in rows based on ID number
 
-  SELECT * FROM activities ORDER BY name;
-  >> Display table and order rows alphabetically by the content within the ‘name’ column
-
-  SELECT * FROM activities ORDER BY ID;
-  >> Display table and order rows in numerical order, based on the  content within the ‘ID’ column
-
-   SELECT * FROM activities WHERE ID<6;
-  >> Will display all columns of rows 1-5
-
-
-
   crud application	- create, read, update, delete abilities
-
-
-
-
-
-
-
-
-
-<!-- old notes (see if anythin g usefel ie re what a specific term/keyword means)
-[table-name]_id bigserial primary key,			>> set type of data for this column
-											bigserial = incrementing positive integers (?)
-											‘primary key’ = each # has to be unique
-											(useful for ID # column)
-	[table-name]_name varchar(x) NOT NULL,		>> Setting the max number of characters
-											each cell in that column can contain
-											varchar(x) stating the maximum number of
-											characters, can contain ‘varied characters’(meaning?)
-	[table-name]_desc text NOT NULL,			>>
-	date_added timestamp default NULL			>> -->
