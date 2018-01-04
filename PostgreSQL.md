@@ -1,17 +1,33 @@
 # PostgreSQL
 
 ### Basic PostgreSQL commands
-```
-# Start Postgres
-$ psql postgres
 
-# Exit Postgres
+#### Starting Postgres locally
+```
+$ psql postgres
+```
+
+#### Connect to an existing database
+```
+$ \connect db_name;
+```
+
+#### Starting Postgres in a Docker container and connecting to a specified database
+This command has to be run in the relevant directory.
+```
+$ docker-compose exec postgres psql -U postgres db_name
+```
+
+#### Exiting Postgres and/or Docker
+```
 $ ctrl + d
-# OR
+
 $ \q
 ```
 
-### Creating users, databases and granting access to databases
+### Setup for first-time use
+
+#### Creating users, databases and granting access to databases
 ```
 # Create database
 $ CREATE DATABASE gorillas;
@@ -21,10 +37,38 @@ $ CREATE USER jane_goodall WITH PASSWORD 'password’;
 
 # Grant access to the database
 $ GRANT ALL PRIVILEGES ON DATABASE gorillas TO jane_goodall;
-
-# Connect to the database
-$ \connect gorillas;
 ```
+
+## Working with table contents
+
+### Create commands
+
+#### To create a table
+```
+$ CREATE TABLE [table-name] (
+  [column-name-1] [column-type-1] [additional data-1],
+  [column-name-2] [column-type-2] [additional data-2]
+  );
+```
++ For each column, need to specify:
+  + Its name
+  + The type of data it will contain
+  + Additional info about it (eg whether it can contain blank cells or not)
++ Each line (,[...],) represents one column of the table.
++ This can all be written on one line within the command line -- but can also split it over several lines to make it easier to read.
++ Best practice for column names varies; some argue ```[table-name]_[column-name]``` is best, others argue for ```[column-name]```.  
+
+Eg:  
+```
+$ CREATE TABLE Activities (
+  Activities_ID bigserial primary key,
+  Activities_Name varchar(10) NOT NULL
+  );
+```
++ Creates a table names Activities which contains two columns:
+  + The first column contains the acitivity ID; can only contain incrementing positive integers. (?)
+  + The second column contains the activity name; can contain various characters, with a max limit of 10 characters.
++ ```NOT NULL``` Specifies that the column has to include some data, ie it is not allowed to contain null values.
 
 ### List commands
 ```
@@ -37,6 +81,9 @@ $ \l
 # When connected to a database; To view all relations (eg tables)
 $ \d
 
+# To view the details of each column of a table
+$ db_table \d
+
 # To view all entries within a table
 $ SELECT * FROM db_table;
 
@@ -47,49 +94,40 @@ $ SELECT * FROM db_table WHERE ID<6;
 $ SELECT * FROM db_table ORDER BY first_name;
 ```
 
+### Update commands
+
 ### Delete commands
+
+#### To delete a database
 ```
-# To delete entry from a database
-$ DELETE FROM db_table WHERE ID=[ID_number];
-# OR
-$ DELETE FROM db_table WHERE ID>[ID_number];
-# OR
-$ DELETE FROM db_table WHERE ID IN([ID_number_1], [ID_number_2]);
-
-# To delete a table
-$ DROP TABLE db_table;
-
-# To delete a database
 $ DROP DATABASE database_name;
 ```
 
-<!-- Notes to go through and clean up below -->
+#### To delete a table
+```
+$ DROP TABLE db_table;
+```
 
-### To create a table
+#### To delete all entries from a table
 ```
-CREATE TABLE [table-name] (
-  [column-name-1] [column-type-1] [additional data-1],
-  [column-name-2] [column-type-2] [additional data-2]
-  );
+$ DELETE FROM db_table;
 ```
-+ For each column, need to specify:
-  + Its name
-  + The type of data it will contain
-  + Additional info about it (eg whether it can contain blank cells or not)
-+ Each line (,[...],) represents one column of the table.
-+ This can all be written on one line within the command line -- but can also split it over several lines to make it easier to read.
-+ Best practice for column names varies; some argue ```[table-name]_[column-name]``` is best, others argue for ```[column-name]```.  
-Eg:  
+
+#### To delete one or more specific entries from a table
 ```
-CREATE TABLE Activities (
-  Activities_ID bigserial primary key,
-  Activities_Name varchar(10) NOT NULL
-  );
+$ DELETE FROM db_table WHERE ID=[ID_number];
+
+$ DELETE FROM db_table WHERE ID>[ID_number];
+
+$ DELETE FROM db_table WHERE ID IN([ID_number_1], [ID_number_2]);
 ```
-+ Creates a table names Activities which contains two columns:
-  + The first column contains the acitivity ID; can only contain incrementing positive integers. (?)
-  + The second column contains the activity name; can contain various characters, with a max limit of 10 characters.
-+ ```NOT NULL``` Specifies that the column has to include some data, ie it is not allowed to contain null values.
+
+## Working with table properties
+
+#### To update table properties
+(Eg column data types and character limits)
+
+<!-- Notes to go through and clean up below -->
 
 ### To edit existing tables
 
