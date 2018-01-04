@@ -127,6 +127,7 @@ $ DELETE FROM db_table WHERE ID IN([ID_number_1], [ID_number_2]);
 #### To update table properties
 (Eg column data types and character limits)
 
+## Go through and clean up the below notes
 <!-- Notes to go through and clean up below -->
 
 ### To edit existing tables
